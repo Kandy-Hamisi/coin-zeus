@@ -5,6 +5,7 @@ import { signInSchema } from "@/lib/validations";
 import ActionCard from "@/components/ActionCard";
 import { ArrowDown, ArrowUpIcon, PiggyBankIcon, Wallet } from "lucide-react";
 import OverviewCard from "@/components/OverviewCard";
+import TransactionHistory from "@/components/TransactionHistory";
 
 export default function Home() {
   return (
@@ -49,7 +50,11 @@ export default function Home() {
           iconColor="text-red-500"
         />
       </div>
-      <div></div>
+      {/*  Transaction History*/}
+      <div className="my-8 flex items-center justify-between gap-12">
+        <TransactionHistory />
+        <TransactionHistory />
+      </div>
     </div>
   );
 }
