@@ -6,6 +6,7 @@ import ActionCard from "@/components/ActionCard";
 import { ArrowDown, ArrowUpIcon, PiggyBankIcon, Wallet } from "lucide-react";
 import OverviewCard from "@/components/OverviewCard";
 import TransactionHistory from "@/components/TransactionHistory";
+import AppLineChart from "@/components/AppLineChart";
 
 export default function Home() {
   return (
@@ -53,7 +54,7 @@ export default function Home() {
       {/*  Transaction History*/}
       <div className="my-8 flex items-center justify-between gap-12">
         <TransactionHistory />
-        <TransactionHistory />
+        <AppLineChart />
       </div>
     </div>
   );
