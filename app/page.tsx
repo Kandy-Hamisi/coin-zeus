@@ -52,7 +52,7 @@ export default function Home() {
         />
       </div>
       {/*  Transaction History*/}
-      <div className="my-8 flex items-center justify-between gap-12">
+      <div className="my-8 flex justify-between gap-12">
         <TransactionHistory />
         <AppLineChart />
       </div>
