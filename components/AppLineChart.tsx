@@ -39,7 +39,7 @@ const AppLineChart = () => {
   return (
     <Card className="flex-1">
       <CardHeader className="flex justify-between">
-        <CardTitle className="font-montserrat">The quick brown fox</CardTitle>
+        <CardTitle className="font-secondary">The quick brown fox</CardTitle>
         <DropdownMenu>
           <DropdownMenuTrigger className="cursor-pointer text-sm flex items-center gap-2 bg-primary-foreground p-1 rounded-md ">
             <h5>Weekly</h5>
