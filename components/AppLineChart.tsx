@@ -14,7 +14,6 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { ChevronDown } from "lucide-react";
 
 const chartData = [
   { month: "January", desktop: 186, mobile: 80 },
@@ -39,12 +38,13 @@ const AppLineChart = () => {
   return (
     <Card className="flex-1">
       <CardHeader className="flex justify-between">
-        <CardTitle className="font-secondary">The quick brown fox</CardTitle>
+        <CardTitle className="font-merienda">Data Overview</CardTitle>
         <DropdownMenu>
-          <DropdownMenuTrigger className="cursor-pointer text-sm flex items-center gap-2 bg-primary-foreground p-1 rounded-md ">
-            <h5>Weekly</h5>
-            <ChevronDown size={13} />
-          </DropdownMenuTrigger>
+          <div className="ring-1 ring-accent-foreground px-2 rounded-md">
+            <DropdownMenuTrigger className="text-sm">
+              Weekly
+            </DropdownMenuTrigger>
+          </div>
           <DropdownMenuContent>
             <DropdownMenuItem>Weekly</DropdownMenuItem>
             <DropdownMenuItem>Monthly</DropdownMenuItem>
