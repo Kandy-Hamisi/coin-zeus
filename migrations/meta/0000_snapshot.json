@@ -1,0 +1,216 @@
+{
+  "id": "9a6f47d5-654d-4d9c-a333-a8b80911fed1",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.users": {
+      "name": "users",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "email": {
+          "name": "email",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "first_name": {
+          "name": "first_name",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "last_name": {
+          "name": "last_name",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "avatar": {
+          "name": "avatar",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "timezone": {
+          "name": "timezone",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": false,
+          "default": "'UTC'"
+        },
+        "currency": {
+          "name": "currency",
+          "type": "varchar(3)",
+          "primaryKey": false,
+          "notNull": false,
+          "default": "'USD'"
+        },
+        "date_format": {
+          "name": "date_format",
+          "type": "varchar(20)",
+          "primaryKey": false,
+          "notNull": false,
+          "default": "'MM/dd/yyyy'"
+        },
+        "first_day_of_week": {
+          "name": "first_day_of_week",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "default": 0
+        },
+        "is_email_verified": {
+          "name": "is_email_verified",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false,
+          "default": false
+        },
+        "is_premium": {
+          "name": "is_premium",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false,
+          "default": false
+        },
+        "premium_expires_at": {
+          "name": "premium_expires_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "last_login_at": {
+          "name": "last_login_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false,
+          "default": "now()"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "users_email_unique": {
+          "name": "users_email_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "email"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    }
+  },
+  "enums": {
+    "public.account_type": {
+      "name": "account_type",
+      "schema": "public",
+      "values": [
+        "CHECKING",
+        "SAVINGS",
+        "CREDIT_CARD",
+        "CASH",
+        "INVESTMENT",
+        "LOAN",
+        "OTHER"
+      ]
+    },
+    "public.budget_period": {
+      "name": "budget_period",
+      "schema": "public",
+      "values": [
+        "WEEKLY",
+        "MONTHLY",
+        "QUARTERLY",
+        "YEARLY"
+      ]
+    },
+    "public.frequency": {
+      "name": "frequency",
+      "schema": "public",
+      "values": [
+        "DAILY",
+        "WEEKLY",
+        "BIWEEKLY",
+        "MONTHLY",
+        "QUARTERLY",
+        "YEARLY"
+      ]
+    },
+    "public.goal_status": {
+      "name": "goal_status",
+      "schema": "public",
+      "values": [
+        "ACTIVE",
+        "COMPLETED",
+        "PAUSED",
+        "CANCELLED"
+      ]
+    },
+    "public.notification_type": {
+      "name": "notification_type",
+      "schema": "public",
+      "values": [
+        "BUDGET_ALERT",
+        "BILL_REMINDER",
+        "GOAL_PROGRESS",
+        "LARGE_EXPENSE",
+        "SUBSCRIPTION_RENEWAL",
+        "ACCOUNT_SYNC"
+      ]
+    },
+    "public.subscription_status": {
+      "name": "subscription_status",
+      "schema": "public",
+      "values": [
+        "ACTIVE",
+        "CANCELLED",
+        "PAUSED",
+        "EXPIRED"
+      ]
+    },
+    "public.transaction_type": {
+      "name": "transaction_type",
+      "schema": "public",
+      "values": [
+        "EXPENSE",
+        "INCOME",
+        "TRANSFER"
+      ]
+    }
+  },
+  "schemas": {},
+  "sequences": {},
+  "roles": {},
+  "policies": {},
+  "views": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}
