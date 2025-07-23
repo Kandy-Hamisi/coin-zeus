@@ -72,6 +72,7 @@ export const users = pgTable("users", {
   email: text("email").notNull().unique(),
   firstName: varchar("first_name", { length: 100 }),
   lastName: varchar("last_name", { length: 100 }),
+  password: text("password"),
   avatar: text("avatar"),
   timezone: varchar("timezone", { length: 50 }).default("UTC"),
   currency: varchar("currency", { length: 3 }).default("USD"),
